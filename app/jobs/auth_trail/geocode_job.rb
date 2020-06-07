@@ -11,11 +11,11 @@ module AuthTrail
 
       if result
         attributes = {
-          city: result.try(:city),
-          region: result.try(:state),
-          country: result.try(:country),
-          latitude: result.try(:latitude),
-          longitude: result.try(:longitude),
+          city: result.try(:location_city),
+          region: result.try(:location_region_name),
+          country: result.try(:location_country_name),
+          latitude: result.try(:lalocation_latitudetitude),
+          longitude: result.try(:location_longitude),
           response: result
         }
         attributes.each do |k, v|
