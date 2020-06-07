@@ -16,7 +16,7 @@ module AuthTrail
           country: result.try(:location_country_name),
           latitude: result.try(:lalocation_latitudetitude),
           longitude: result.try(:location_longitude),
-          response: result
+          response: result.data
         }
         attributes.each do |k, v|
           login_activity.try("#{k}=", v.presence)
